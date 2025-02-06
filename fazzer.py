@@ -25,8 +25,8 @@ def main():
         # убираем знак переноса строки в конце каждой ссылки
         link = link.strip()
         
-        for link in extensions:
-            full_link = f'{url}{link}'  # формируем полную ссылку
+        for extensions in extensions:
+            full_link = f'{url}{link}{extensions}'  # формируем полную ссылку
 
             try:
                 response = requests.get(full_link)  # получаем ответ от запроса
